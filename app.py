@@ -48,18 +48,18 @@ class MusicPlayer:
         if self.playlist:
             pygame.mixer.music.load(self.playlist[0])
             pygame.mixer.music.play()
-            self.status.set("Playing")
+            self.status.set("Playing a Music")
 
     def pause(self):
         pygame.mixer.music.pause()
-        self.status.set("Paused")
+        self.status.set("Paused a Music")
 
     def stop(self):
         pygame.mixer.music.stop()
-        self.status.set("Stopped")
+        self.status.set("Stopped a Music")
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry('600x600')
+    root.geometry('800x800')
     app = MusicPlayer(root)
     root.mainloop()
